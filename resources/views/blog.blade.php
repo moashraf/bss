@@ -25,59 +25,31 @@
                         
                             <div class="col-xs-12">
 
-                                <div class="single_blog col-md-4">
-                                    <img src="img/avatar.jpg" alt="">
-                                    <div class="single_blog_body">
-                                        <h4>العنوان</h4>
-                                        <p>لوريم ايبسوم هو نص تحضيرى لاختبار النص الحقيقى</p>
-                                        <a href="#">
-                                            اقرا المزيد
-                                            <i class="fa fa-chevron-left fa-fw"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                            @foreach($blog as $blog_val)
 
-                                <div class="single_blog col-md-4">
-                                    <img src="img/avatar.jpg" alt="">
-                                    <div class="single_blog_body">
-                                        <h4>العنوان</h4>
-                                        <p>لوريم ايبسوم هو نص تحضيرى لاختبار النص الحقيقى</p>
-                                        <a href="#">
-                                            اقرا المزيد
-                                            <i class="fa fa-chevron-left fa-fw"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                               <div class="single_blog col-md-4">
+                                        <a href="{{$blog_val->id}}">
 
-                                <div class="single_blog col-md-4">
-                                    <img src="img/avatar.jpg" alt="">
+                                    <img src="{{$blog_val->image}}" alt="">
                                     <div class="single_blog_body">
-                                        <h4>العنوان</h4>
-                                        <p>لوريم ايبسوم هو نص تحضيرى لاختبار النص الحقيقى</p>
-                                        <a href="#">
+                                        <h4>{{$blog_val->title}} </h4>
+                                        <p> {{$blog_val->body}} </p>
+                                        <a href="{{$blog_val->id}}">
                                             اقرا المزيد
                                             <i class="fa fa-chevron-left fa-fw"></i>
                                         </a>
                                     </div>
-                                </div>
+                                 </a>
 
-                                <div class="single_blog col-md-4">
-                                    <img src="img/avatar.jpg" alt="">
-                                    <div class="single_blog_body">
-                                        <h4>العنوان</h4>
-                                        <p>لوريم ايبسوم هو نص تحضيرى لاختبار النص الحقيقى</p>
-                                        <a href="#">
-                                            اقرا المزيد
-                                            <i class="fa fa-chevron-left fa-fw"></i>
-                                        </a>
-                                    </div>
                                 </div>
+                        @endforeach
 
                              </div>
                         
                           
                             
-                            
+                                           <center>   {{ $blog->links() }}  </center> 
+
                             
                         </div><!--End row-->
                     </div><!--End Container-->

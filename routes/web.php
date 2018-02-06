@@ -14,10 +14,9 @@
 Route::get('/', function () {
     return view('master');
 });
-Route::get('blog', function () {
-    return view('blog');
-});
-
+ 
+ 
+    Route::resource('blog', 'postscontroller');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
