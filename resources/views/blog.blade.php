@@ -33,7 +33,7 @@
                                     <img src="{{$blog_val->image}}" alt="">
                                     <div class="single_blog_body">
                                         <h4>{{$blog_val->title}} </h4>
-                                        <p> {{$blog_val->body}} </p>
+                                        <p>  <?php  echo $blog_val->body   ;?> </p>
                                         <a href="{{$blog_val->id}}">
                                             اقرا المزيد
                                             <i class="fa fa-chevron-left fa-fw"></i>
