@@ -27,35 +27,31 @@
                 <div class="container">
                     <ul class="socials list-unstyled list-inline navbar-left">
                         <li>
-                            <a href="#">
+                            <a  target="_blank" href="{{ setting('site.facebook') }}">
                                 <i class="fa fa-facebook fa-fw"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fa fa-twitter fa-fw"></i>
+                            <a  target="_blank" href="{{ setting('site.linkedin') }}">
+                                <i class="fa fa-linkedin fa-fw"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fa fa-instagram fa-fw"></i>
+                            <a  target="_blank" href="{{ setting('site.youtube') }}">
+                                <i class="fa fa-youtube fa-fw"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus fa-fw"></i>
-                            </a>
-                        </li>
+                         
                     </ul>
 
                     <ul class="mail list-unstyled list-inline navbar-right">
                     <li>
                         <i class="fa fa-envelope fa-fw"></i>
-                        admin@admin.com
+                  {{ setting('site.email_email') }}   
                     </li>
                     <li>
                         <i class="fa fa-phone fa-fw"></i>
-                        0100 000 0000
+              {{ setting('site.phone_phone') }} 
                     </li>
                 </ul>
                 </div>    
@@ -74,18 +70,18 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand" href="#">
-                    <img src="img/logo-bcc.png" alt="logo">      
+                    <img src="http://localhost/laravel/storage/app/public/{{ setting('site.logo') }}" alt="logo">      
                   </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-left">
-                    <li class=""><a href="index.html" class="active_link">الرئيسية <span class="sr-only">(current)</span></a></li>
-                    <li><a href="aboutus.html">من نحن</a></li>
-                    <li><a href="service.html">الخدمات</a></li>
-                    <li><a href="blog.html">المدونة</a></li>
-                    <li><a href="contact.html">اتصل بنا</a></li>
+                    <li class=""><a href="{{ URL::to('/')}}" class="active_link">الرئيسية <span class="sr-only">(current)</span></a></li>
+                    <li><a href="{{ URL::to('/aboutus')}}">من نحن</a></li>
+                    <li><a href="{{ URL::to('/Service')}}">الخدمات</a></li>
+                    <li><a href="{{ URL::to('/blog')}}">المدونة</a></li>
+                    <li><a href="{{ URL::to('/contact')}}">اتصل بنا</a></li>
                   </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
@@ -107,16 +103,14 @@
                         
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer_about">
-                                <img src="img/logo-bcc.png" alt="footer logo">
-                                <p>
-                                    لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه . او نماذج مواقع انترنت .
-                                </p>
+                                <img src="http://localhost/laravel/storage/app/public/{{ setting('site.logo') }}" alt="footer logo">
+                                <p> {{ setting('site.description') }}</p>
                             </div>
                         </div>
                         
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer_posts">
-                                <h4>احدث المقالات</h4>
+                                <h4> مقالات   </h4>
                                 <div class="media">
                                     <div class="media-left">
                                         <img src="img/img_post.jpg" alt="">
@@ -167,44 +161,10 @@
                         
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer_services">
-                                <h4>الخدمات</h4>
+                                <h4>قوائم</h4>
                                 <ul class="list-unstyled">
-                                    <li>
-                                        <i class="fa fa-chevron-left fa-fw"></i>
-                                        <a href="#">
-                                            <span>العلاج مابعد العلاج</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-chevron-left fa-fw"></i>
-                                        <a href="#">
-                                            <span>المتابعة الدورية المنزلية</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-chevron-left fa-fw"></i>
-                                        <a href="#">
-                                            <span>الوقاية من الاورام</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-chevron-left fa-fw"></i>
-                                        <a href="#">
-                                            <span>متابعة مرضى الاورام</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-chevron-left fa-fw"></i>
-                                        <a href="#">
-                                            <span>برامج الفحص الدورى</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-chevron-left fa-fw"></i>
-                                        <a href="#">
-                                            <span>الاكتشاف المبكر للاورام</span>
-                                        </a>
-                                    </li>
+                                                                    {{ menu('home') }}
+
                                 </ul>
                             </div>
                         </div>
@@ -213,22 +173,16 @@
                             <div class="footer_contact">
                                 <h4>تواصل معنا</h4>
                                 <ul class="list-unstyled">
-                                    <li>
-                                        <i class="fa fa-mobile fa-fw"></i>
-                                        0100 000 0000
-                                    </li>
+                                     
                                     <li>
                                         <i class="fa fa-phone fa-fw"></i>
-                                        002 123 456 78
-                                    </li>
+{{ setting('site.phone_phone') }}                                    </li>
                                     <li>
                                         <i class="fa fa-envelope fa-fw"></i>
-                                        admin@admin.com
-                                    </li>
+{{ setting('site.email_email') }}                                    </li>
                                     <li>
                                         <i class="fa fa-map-marker fa-fw"></i>
-                                        25 شارع اسماء فهمى, القاهرة, مصر
-                                    </li>
+{{ setting('site.location_location') }}                                    </li>
                                 </ul>
                             </div>
                         </div>

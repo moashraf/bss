@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "61463ec4537e9c743fc6c930fc116087",
+    "content-hash": "60fcb6d7ca069baf8cae16dff5274dfa",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1161,21 +1161,21 @@
         },
         {
             "name": "larapack/doctrine-support",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larapack/doctrine-support.git",
-                "reference": "02c9fc73324d9111bb03bb8b087653afde8972e0"
+                "reference": "16807bb3c6ca8ceb505e8d0caf6b48c2e5724e01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larapack/doctrine-support/zipball/02c9fc73324d9111bb03bb8b087653afde8972e0",
-                "reference": "02c9fc73324d9111bb03bb8b087653afde8972e0",
+                "url": "https://api.github.com/repos/larapack/doctrine-support/zipball/16807bb3c6ca8ceb505e8d0caf6b48c2e5724e01",
+                "reference": "16807bb3c6ca8ceb505e8d0caf6b48c2e5724e01",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.5",
-                "illuminate/support": "5.3.*|5.4.*|5.5.*|5.5.x-dev"
+                "illuminate/support": "5.3.*|5.4.*|5.5.*|5.6.*"
             },
             "type": "library",
             "autoload": {
@@ -1202,7 +1202,7 @@
                 "laravel",
                 "support"
             ],
-            "time": "2017-09-21T16:46:37+00:00"
+            "time": "2018-02-08T14:04:59+00:00"
         },
         {
             "name": "larapack/hooks",
@@ -1251,16 +1251,16 @@
         },
         {
             "name": "larapack/voyager-hooks",
-            "version": "v1.0.6",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/larapack/voyager-hooks.git",
-                "reference": "3844566a245d7893dfda84410a2e0949f1dd0ab9"
+                "reference": "60ef8178b8b6ee9efebaadd94b8d5044ab4df360"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/larapack/voyager-hooks/zipball/3844566a245d7893dfda84410a2e0949f1dd0ab9",
-                "reference": "3844566a245d7893dfda84410a2e0949f1dd0ab9",
+                "url": "https://api.github.com/repos/larapack/voyager-hooks/zipball/60ef8178b8b6ee9efebaadd94b8d5044ab4df360",
+                "reference": "60ef8178b8b6ee9efebaadd94b8d5044ab4df360",
                 "shasum": ""
             },
             "require": {
@@ -1299,7 +1299,7 @@
                 "laravel",
                 "voyager"
             ],
-            "time": "2018-01-17T09:01:28+00:00"
+            "time": "2018-02-08T09:32:42+00:00"
         },
         {
             "name": "laravel/framework",
@@ -3160,16 +3160,16 @@
         },
         {
             "name": "tcg/voyager",
-            "version": "v1.0.14",
+            "version": "v1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-control-group/voyager.git",
-                "reference": "e9c530f0f9406e09107b3113a3232f97e0bb7230"
+                "reference": "7b5bed7db88f211670ea4d3fd32f382dfe218dde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/e9c530f0f9406e09107b3113a3232f97e0bb7230",
-                "reference": "e9c530f0f9406e09107b3113a3232f97e0bb7230",
+                "url": "https://api.github.com/repos/the-control-group/voyager/zipball/7b5bed7db88f211670ea4d3fd32f382dfe218dde",
+                "reference": "7b5bed7db88f211670ea4d3fd32f382dfe218dde",
                 "shasum": ""
             },
             "require": {
@@ -3189,7 +3189,7 @@
                 "orchestra/testbench": "~3.4.0|~3.5.0",
                 "orchestra/testbench-browser-kit": "~3.4.0|~3.5.0",
                 "orchestra/testbench-core": "~3.4.0|~3.5.0",
-                "phpunit/phpcov": "~3.0|dev-master",
+                "phpunit/phpcov": "~3.0|~4.0",
                 "phpunit/phpunit": "~5.7.14|~6.1"
             },
             "type": "library",
@@ -3222,7 +3222,7 @@
                 "laravel",
                 "panel"
             ],
-            "time": "2018-01-17T11:55:02+00:00"
+            "time": "2018-02-06T16:37:40+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

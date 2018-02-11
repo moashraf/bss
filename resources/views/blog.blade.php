@@ -28,12 +28,19 @@
                             @foreach($blog as $blog_val)
 
                                <div class="single_blog col-md-4">
-                                        <a href="{{$blog_val->id}}">
+                                        <a href="blog/{{$blog_val->id}}">
 
-                                    <img src="{{$blog_val->image}}" alt="">
+                                    <img src="{{'http://localhost/laravel/storage/app/public/'.$blog_val->image}}" alt="">
                                     <div class="single_blog_body">
                                         <h4>{{$blog_val->title}} </h4>
-                                        <p>  <?php  echo $blog_val->body   ;?> </p>
+                                        <p>  
+                                            <?php 
+                                         
+$small = substr( $blog_val->body   , 0, 120);
+    echo $small ;
+
+                                              ;?>
+                                             </p>
                                         <a href="{{$blog_val->id}}">
                                             اقرا المزيد
                                             <i class="fa fa-chevron-left fa-fw"></i>

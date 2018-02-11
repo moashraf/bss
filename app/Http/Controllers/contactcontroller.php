@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
- use App\posts;
 
 use Illuminate\Http\Request;
 
-class postscontroller extends Controller
+class contactcontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class postscontroller extends Controller
      */
     public function index()
     {
-         $blog = posts::paginate(9);
-          return view('blog', [ 'blog' => $blog ]);
-
+           return view('contact');
     }
 
     /**
@@ -48,9 +45,7 @@ class postscontroller extends Controller
      */
     public function show($id)
     {
-$Single_blog =  posts::find($id);
-          return view('Single_blog', [ 'Single_blog' => $Single_blog ]);
-
+        //
     }
 
     /**
