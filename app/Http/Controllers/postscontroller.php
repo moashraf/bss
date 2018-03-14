@@ -15,6 +15,7 @@ class postscontroller extends Controller
     public function index()
     {
          $blog = posts::paginate(9);
+
           return view('blog', [ 'blog' => $blog ]);
 
     }
@@ -49,7 +50,9 @@ class postscontroller extends Controller
     public function show($id)
     {
 $Single_blog =  posts::find($id);
-          return view('Single_blog', [ 'Single_blog' => $Single_blog ]);
+            $blog = posts::limit(3)->get();
+
+          return view('Single_blog', [ 'Single_blog' => $Single_blog ,'blog' => $blog   ]);
 
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
  use App\Service;
+ use App\posts;
 
 class servicecontroller extends Controller
 {
@@ -15,7 +16,9 @@ class servicecontroller extends Controller
     public function index()
     {
      $Service = Service::paginate(9);
-          return view('Service', [ 'Service' => $Service ]);
+                 $blog = posts::limit(3)->get();
+
+          return view('Service', [ 'Service' => $Service ,'blog' => $blog ]);
     }
 
     /**

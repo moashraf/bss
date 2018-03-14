@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
  use App\pages;
  use App\Doctor;
  use App\Service;
+ use App\posts;
  
 
 class homecontroller extends Controller
@@ -18,10 +19,11 @@ class homecontroller extends Controller
     public function index()
     {
             $pages = pages::paginate(9);
-            $doctor = Doctor::limit(3)->get();;
-            $Service = Service::limit(6)->get();;
+            $doctor = Doctor::limit(3)->get();
+            $Service = Service::limit(6)->get();
+            $blog = posts::limit(3)->get();
  
-          return view('home', [ 'pages' => $pages ,'doctor' => $doctor ,'Service' => $Service , ]);
+          return view('home', [ 'pages' => $pages ,'doctor' => $doctor ,'blog' => $blog ,'Service' => $Service , ]);
     }
 
     /**

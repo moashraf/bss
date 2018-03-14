@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+ use App\posts;
 
 class contactcontroller extends Controller
 {
@@ -13,7 +14,10 @@ class contactcontroller extends Controller
      */
     public function index()
     {
-           return view('contact');
+            $blog = posts::limit(3)->get();
+        
+           return view('contact', ['blog' => $blog  ]);
+
     }
 
     /**

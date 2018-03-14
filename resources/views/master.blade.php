@@ -70,7 +70,7 @@
                     <span class="icon-bar"></span>
                   </button>
                   <a class="navbar-brand" href="#">
-                    <img src="http://localhost/laravel/storage/app/public/{{ setting('site.logo') }}" alt="logo">      
+                    <img src="{{ \URL::to('/') }}/storage/app/public/{{ setting('site.logo') }}" alt="logo">      
                   </a>
                 </div>
 
@@ -111,51 +111,35 @@
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer_posts">
                                 <h4> مقالات   </h4>
-                                <div class="media">
+                                
+          <?php $count = 0; ?>
+                             
+          @foreach ($blog as $blog_val)
+ 
+    <?php if($count == 3) break; ?>
+ 
+
+
+
+ <div class="media">
                                     <div class="media-left">
-                                        <img src="img/img_post.jpg" alt="">
+                                        <img src="{{'http://localhost/bcc/storage/app/public/'.$blog_val->image}}" alt=" {{$blog_val->title}}   ">
                                     </div>
                                     <div class="media-body">
                                         <h4 class="media-heading">
                                             <a href="#">
-                                                عنوان المقال 
-                                            </a>    
+{{$blog_val->title}}                                            </a>    
                                         </h4>
                                         <p>    
-                                            01/01/2000
-                                        </p>    
+ {{$blog_val->created_at}}  
+                                         </p>    
                                     </div>
                                 </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="img/img_post.jpg" alt="">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">
-                                            <a href="#">
-                                                عنوان المقال
-                                            </a>    
-                                        </h4>
-                                        <p>    
-                                            01/01/2000
-                                        </p>    
-                                    </div>
-                                </div>
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="img/img_post.jpg" alt="">
-                                    </div>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">
-                                            <a href="#">
-                                                عنوان المقال
-                                            </a>    
-                                        </h4>
-                                        <p>    
-                                            01/01/2000
-                                        </p>    
-                                    </div>
-                                </div>
+    <?php $count++; ?>
+
+                                @endforeach
+ 
+                               
                             </div>
                         </div>
                         

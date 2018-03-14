@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
  use App\Review;
  use App\Doctor;
+ use App\posts;
 
 use Illuminate\Http\Request;
 
@@ -17,8 +18,11 @@ class aboutuscontroller extends Controller
     {
              $Review = Review::limit(6)->get();
              $doctor = Doctor::limit(9)->get();
+            $blog = posts::limit(3)->get();
+        
+        
  
-          return view('aboutus', [ 'Review' => $Review ,'doctor' => $doctor   ]);
+          return view('aboutus', [ 'Review' => $Review ,'doctor' => $doctor ,'blog' => $blog   ]);
 
     }
 
